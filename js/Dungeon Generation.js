@@ -47,7 +47,7 @@ class Dungeon {
                         "Empty",
                         "202020",
                         ".",
-                        1,
+                        1.5,
                         "Empty"
                     );
                 }
@@ -167,7 +167,7 @@ class Dungeon {
                             "Empty",
                             "202020",
                             ".",
-                            1,
+                            1.5,
                             "Empty"
                         );
                     }
