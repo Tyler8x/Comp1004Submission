@@ -164,5 +164,3 @@ class BasicRoom {
         return "Error placing room";
     }
 }
-
-AllRooms = [BasicRoom];
