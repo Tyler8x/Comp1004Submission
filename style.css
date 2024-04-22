@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.header {
+  background-color: #aaaaaa;
+  text-align: center;
+  padding: 20px;
+  font-family: sans-serif;
+}
+.footer {
+  background-color: #aaaaaa;
+  text-align: center;
+  padding: 10px;
+}
+*{
+   box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 50%;
+  padding-left:10%;
+}
+.right {
+  width: 50%;
+  padding-right: 10%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
