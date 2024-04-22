@@ -7,11 +7,8 @@ class Triangle {
         this.edges.push(new Edge(this.p1, this.p2));
         this.edges.push(new Edge(this.p2, this.p3));
         this.edges.push(new Edge(this.p3, this.p1));
-        //try {
         this.circumcentre = this.circumcentreCalc(this.p1, this.p2, this.p3);
-    } //Must be in a try/except, if all points lay on a line the circumcentre
-    //catch {                                                                     //is impossible to calculate, rightly so
-    //  this.circumcentre = this.p1}}
+    }
     circumcentreCalc(a, b, c) {
         let ad = a[0] * a[0] + a[1] * a[1];
         let bd = b[0] * b[0] + b[1] * b[1];
