@@ -1,82 +1,84 @@
 <!DOCTYPE html>
-<script src="js/Dungeon Generation.js"></script>
-<script src="js/Scripting.js"></script>
-<script src="js/aStar.js"></script>
-<script src="js/BasicThemeRooms.js"></script>
-<script src="js/PrimsMinimumSpanningTree.js"></script>
-<script src="js/BowyerWatsonDelauneyTriangulation.js"></script>
-<html>
-  <head>
-    <title>Dungeon Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <h1>Dungeon Generator</h1>
-      <p>Fully random maps, at your fingertips</p>
-    </div>
-    <div class="row">
-      <div class="column left">
-        <canvas
-          id="myCanvas"
-          width="1560"
-          height="1560"
-          style="
-            width: 100%;
-            transition: opacity 0.2s ease 0s;
-            border: 1px solid #000000;
-          "
-        ></canvas>
-      </div>
-      <div class="column right">
-        <div class="input1">
-          <select id="RoomNumber">
-            <option value="4">4 Rooms</option>
-            <option value="5">5 Rooms</option>
-            <option value="6">6 Rooms</option>
-            <option value="7">7 Rooms</option>
-            <option value="8">8 Rooms</option>
-          </select>
-          <p>The number of rooms the dungeon will generate with</p>
+<html lang="en">
+    <head>
+        <script src="js/Dungeon Generation.js"></script>
+        <script src="js/Scripting.js"></script>
+        <script src="js/aStar.js"></script>
+        <script src="js/BasicThemeRooms.js"></script>
+        <script src="js/PrimsMinimumSpanningTree.js"></script>
+        <script src="js/BowyerWatsonDelauneyTriangulation.js"></script>
+        <title>Dungeon Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <h1>Dungeon Generator</h1>
+            <p>Fully random maps, at your fingertips</p>
         </div>
-        <br />
-        <div class="input2">
-          <select id="dunSize">
-            <option value="30">Extra Small</option>
-            <option value="40">Small</option>
-            <option value="50">Medium</option>
-            <option value="60">Large</option>
-            <option value="70">Extra Large</option>
-          </select>
-          <p>The size of the generated dungeon</p>
+        <div class="row">
+            <div class="column left">
+                <canvas
+                    id="myCanvas"
+                    width="1560"
+                    height="1560"
+                    style="
+                        width: 100%;
+                        transition: opacity 0.2s ease 0s;
+                        border: 1px solid #000000;
+                    "
+                ></canvas>
+            </div>
+            <div class="column right">
+                <div class="input1">
+                    <select id="RoomNumber">
+                        <option value="4">4 Rooms</option>
+                        <option value="5">5 Rooms</option>
+                        <option value="6">6 Rooms</option>
+                        <option value="7">7 Rooms</option>
+                        <option value="8">8 Rooms</option>
+                    </select>
+                    <p>The number of rooms the dungeon will generate with</p>
+                </div>
+                <br />
+                <div class="input2">
+                    <select id="dunSize">
+                        <option value="30">Extra Small</option>
+                        <option value="40">Small</option>
+                        <option value="50">Medium</option>
+                        <option value="60">Large</option>
+                        <option value="70">Extra Large</option>
+                    </select>
+                    <p>The size of the generated dungeon</p>
+                </div>
+                <div class="input3">
+                    <select id="corridorChance">
+                        <option value="0">None</option>
+                        <option value="30">Some</option>
+                        <option value="50">Most</option>
+                        <option value="80">A Lot</option>
+                        <option value="100">All</option>
+                    </select>
+                    <p>
+                        The chance of additional corridors spawning, creating
+                        loops in the dungeon
+                    </p>
+                </div>
+                <div class="input4">
+                    <select id="textureSize">
+                        <option value="16">Mockup - 16px</option>
+                        <option value="32">Standard - 32px</option>
+                        <option value="64">Detailed - 64px</option>
+                    </select>
+                    <p>The texture resolution of each tile</p>
+                </div>
+                <br />
+                <button type="button" onclick="Debug()">
+                    Do do the thing thing
+                </button>
+            </div>
         </div>
-        <div class="input3">
-          <select id="corridorChance">
-            <option value="0">None</option>
-            <option value="30">Some</option>
-            <option value="50">Most</option>
-            <option value="80">A Lot</option>
-            <option value="100">All</option>
-          </select>
-          <p>
-            The chance of additional corridors spawning, creating loops in the
-            dungeon
-          </p>
+        <div class="footer">
+            <p>Footer</p>
         </div>
-        <div class="input4">
-          <select id="textureSize">
-            <option value="16">Mockup - 16px</option>
-            <option value="32">Standard - 32px</option>
-            <option value="64">Detailed - 64px</option>
-          </select>
-          <p>The texture resolution of each tile</p>
-        </div>
-        <br />
-        <button type="button" onclick="Debug()">Do do the thing thing</button>
-      </div>
-    </div>
-    <div class="footer">
-      <p>Footer</p>
-    </div>
-  </body>
+    </body>
 </html>
