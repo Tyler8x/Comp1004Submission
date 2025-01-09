@@ -22,7 +22,7 @@ class Triangle {
             (1 / D) *
                 (ad * (b[1] - c[1]) + bd * (c[1] - a[1]) + cd * (a[1] - b[1])), //#Calculates the circumcentre of the triangle
             (1 / D) *
-                (ad * (c[0] - b[0]) + bd * (a[0] - c[0]) + cd * (b[0] - a[0])),
+                (ad * (c[0] - b[0]) + bd * (a[0] - c[0]) + cd * (b[0] - a[0]))
         ];
     }
 }
